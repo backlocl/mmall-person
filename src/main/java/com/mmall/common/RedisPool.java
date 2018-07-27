@@ -9,8 +9,8 @@ public class RedisPool {
 
     private static JedisPool pool=null;
     private static Integer maxTool= Integer.parseInt(PropertiesUtil.getProperty("redis.max.total","20"));
-    private static Integer maxIdle=Integer.parseInt(PropertiesUtil.getProperty("redis.max.idle","20"));;
-    private static Integer minIdle=Integer.parseInt(PropertiesUtil.getProperty("redis.min.idle","20"));;
+    private static Integer maxIdle=Integer.parseInt(PropertiesUtil.getProperty("redis.max.idle","10"));;
+    private static Integer minIdle=Integer.parseInt(PropertiesUtil.getProperty("redis.min.idle","2"));;
     private static Boolean testOnBorrow=Boolean.parseBoolean(PropertiesUtil.getProperty("redis.test.borrow","true"));
     private static Boolean testOnreturn=Boolean.parseBoolean(PropertiesUtil.getProperty("redis.test.return","true"));
 
